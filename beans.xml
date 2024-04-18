@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE beans PUBLIC "-//SPRING//DTD BEAN 2.0//EN"
+        "http://www.springframework.org/dtd/spring-beans-2.0.dtd">
+
+<beans>
+	<bean id="iphones" class="com.amazon.Product">
+		<constructor-arg value="1003">
+		</constructor-arg>
+		<constructor-arg value="Iphone15">
+		</constructor-arg>
+		<constructor-arg value="200000">
+		</constructor-arg>
+		<constructor-arg value="false"></constructor-arg>
+		<constructor-arg>
+			<set>
+				<value>Iphone14</value>
+				<value>Iphone15</value>
+				<value>Iphone14</value>
+				<value>Iphone12</value>
+			</set>
+		</constructor-arg>
+		<constructor-arg>
+			<map>
+				<entry key="111" value="11100"></entry>
+				<entry key="222" value="22200"></entry>
+				<entry key="333" value="33300"></entry>
+				<entry key="111" value="44400"></entry>
+			</map>
+		</constructor-arg>
+	</bean>
+
+	<bean id="orderOne" class="com.amazon.order.Order">
+
+		<constructor-arg index="1" value="200000"></constructor-arg>
+		<constructor-arg index="0" value="order4455" />
+		<constructor-arg index="2" ref="iphones"></constructor-arg>
+		
+	</bean>
+	
+	
+
+</beans>
